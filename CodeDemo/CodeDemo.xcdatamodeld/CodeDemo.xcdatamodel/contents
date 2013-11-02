@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3400" systemVersion="13A603" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CDPhotoDescription" representedClassName="CDPhotoDescription" syncable="YES">
+        <attribute name="farmId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="originalFormat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="originalSecret" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoId" attributeType="String" syncable="YES"/>
+        <attribute name="secret" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serverId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="handles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDPhotoHandle" inverseName="photoDescription" inverseEntity="CDPhotoHandle" syncable="YES"/>
+        <relationship name="largestHandle" optional="YES" transient="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDPhotoHandle" syncable="YES"/>
+        <relationship name="thumbnailHandle" optional="YES" transient="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDPhotoHandle" syncable="YES"/>
+    </entity>
+    <entity name="CDPhotoHandle" representedClassName="CDPhotoHandle" syncable="YES">
+        <attribute name="filePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="photoDescription" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDPhotoDescription" inverseName="handles" inverseEntity="CDPhotoDescription" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CDPhotoDescription" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="CDPhotoHandle" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
 </model>

@@ -18,5 +18,7 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+- (NSURL *)favouritesDirectory;
+- (NSURL *)tempDirectory;
 
 @end

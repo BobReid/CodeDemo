@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5230C166762B420E9ED3D4CE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8E866DB9D4803854EB8EC /* libPods.a */; };
+		B4018D0223924EA68FE0B58F /* libPods-CodeDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E54F88830007466EB34208E1 /* libPods-CodeDemoTests.a */; };
+		C4145C961821F809009B699D /* CDLoadingIndicatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4145C951821F809009B699D /* CDLoadingIndicatorCell.m */; };
+		C4145C99182204E0009B699D /* CDFavouritesAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4145C98182204E0009B699D /* CDFavouritesAlbumViewController.m */; };
+		C4145C9C182207BB009B699D /* CDImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4145C9B182207BB009B699D /* CDImageViewCell.m */; };
+		C4145C9F1823300D009B699D /* CDPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4145C9E1823300D009B699D /* CDPhotoViewController.m */; };
 		C4520C0F1819E02000BE0A13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4520C0E1819E02000BE0A13 /* Foundation.framework */; };
 		C4520C111819E02000BE0A13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4520C101819E02000BE0A13 /* CoreGraphics.framework */; };
 		C4520C131819E02000BE0A13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4520C121819E02000BE0A13 /* UIKit.framework */; };
@@ -22,6 +28,19 @@
 		C4520C301819E02000BE0A13 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4520C141819E02000BE0A13 /* CoreData.framework */; };
 		C4520C381819E02000BE0A13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4520C361819E02000BE0A13 /* InfoPlist.strings */; };
 		C4520C3A1819E02000BE0A13 /* CodeDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4520C391819E02000BE0A13 /* CodeDemoTests.m */; };
+		C4520C481819E23600BE0A13 /* CDPhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4520C471819E23600BE0A13 /* CDPhotoListViewController.m */; };
+		C4849B23181DBA510071273D /* CDFlickrObjectContext.m in Sources */ = {isa = PBXBuildFile; fileRef = C4849B22181DBA510071273D /* CDFlickrObjectContext.m */; };
+		C4849B26181DC9D40071273D /* CDFlickrManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C4849B25181DC9D40071273D /* CDFlickrManagedObject.m */; };
+		C4849B29181DFD7C0071273D /* NSManagedObjectContext+Copying.m in Sources */ = {isa = PBXBuildFile; fileRef = C4849B28181DFD7C0071273D /* NSManagedObjectContext+Copying.m */; };
+		C4849B2C181E00D00071273D /* NSManagedObjectContext+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = C4849B2B181E00D00071273D /* NSManagedObjectContext+Async.m */; };
+		C4849B2F181E0BED0071273D /* CDPhotoHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = C4849B2E181E0BED0071273D /* CDPhotoHandle.m */; };
+		C4849B32181E0BED0071273D /* CDPhotoDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = C4849B31181E0BED0071273D /* CDPhotoDescription.m */; };
+		C4849B351820863B0071273D /* CDProgressIndicatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4849B341820863B0071273D /* CDProgressIndicatorCell.m */; };
+		C4849B391821619F0071273D /* CDPhotoSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4849B381821619F0071273D /* CDPhotoSearchController.m */; };
+		C4B668A818235060008C17FB /* CDZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B668A718235060008C17FB /* CDZoomView.m */; };
+		C4B668B818247E5F008C17FB /* CDFavouritePhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B668B718247E5F008C17FB /* CDFavouritePhotos.m */; };
+		C4B668BC18249505008C17FB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B668BB18249505008C17FB /* Main_iPad.storyboard */; };
+		C4DDDF77181B19300092EF08 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DDDF76181B19300092EF08 /* Main_iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +54,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CCD4728DF544BE197CC52D9 /* Pods-CodeDemoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeDemoTests.xcconfig"; path = "Pods/Pods-CodeDemoTests.xcconfig"; sourceTree = "<group>"; };
+		14A8E866DB9D4803854EB8EC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DA6BCCC3422424A85955EE2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C4145C941821F809009B699D /* CDLoadingIndicatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLoadingIndicatorCell.h; sourceTree = "<group>"; };
+		C4145C951821F809009B699D /* CDLoadingIndicatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLoadingIndicatorCell.m; sourceTree = "<group>"; };
+		C4145C97182204E0009B699D /* CDFavouritesAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDFavouritesAlbumViewController.h; sourceTree = "<group>"; };
+		C4145C98182204E0009B699D /* CDFavouritesAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDFavouritesAlbumViewController.m; sourceTree = "<group>"; };
+		C4145C9A182207BB009B699D /* CDImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDImageViewCell.h; sourceTree = "<group>"; };
+		C4145C9B182207BB009B699D /* CDImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDImageViewCell.m; sourceTree = "<group>"; };
+		C4145C9D1823300D009B699D /* CDPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPhotoViewController.h; sourceTree = "<group>"; };
+		C4145C9E1823300D009B699D /* CDPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPhotoViewController.m; sourceTree = "<group>"; };
 		C4520C0B1819E02000BE0A13 /* CodeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4520C0E1819E02000BE0A13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4520C101819E02000BE0A13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +83,31 @@
 		C4520C351819E02000BE0A13 /* CodeDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CodeDemoTests-Info.plist"; sourceTree = "<group>"; };
 		C4520C371819E02000BE0A13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C4520C391819E02000BE0A13 /* CodeDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeDemoTests.m; sourceTree = "<group>"; };
+		C4520C461819E23600BE0A13 /* CDPhotoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPhotoListViewController.h; sourceTree = "<group>"; };
+		C4520C471819E23600BE0A13 /* CDPhotoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPhotoListViewController.m; sourceTree = "<group>"; };
+		C4849B21181DBA510071273D /* CDFlickrObjectContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDFlickrObjectContext.h; sourceTree = "<group>"; };
+		C4849B22181DBA510071273D /* CDFlickrObjectContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDFlickrObjectContext.m; sourceTree = "<group>"; };
+		C4849B24181DC9D40071273D /* CDFlickrManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDFlickrManagedObject.h; sourceTree = "<group>"; };
+		C4849B25181DC9D40071273D /* CDFlickrManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDFlickrManagedObject.m; sourceTree = "<group>"; };
+		C4849B27181DFD7C0071273D /* NSManagedObjectContext+Copying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Copying.h"; sourceTree = "<group>"; };
+		C4849B28181DFD7C0071273D /* NSManagedObjectContext+Copying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Copying.m"; sourceTree = "<group>"; };
+		C4849B2A181E00D00071273D /* NSManagedObjectContext+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Async.h"; sourceTree = "<group>"; };
+		C4849B2B181E00D00071273D /* NSManagedObjectContext+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Async.m"; sourceTree = "<group>"; };
+		C4849B2D181E0BED0071273D /* CDPhotoHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPhotoHandle.h; sourceTree = "<group>"; };
+		C4849B2E181E0BED0071273D /* CDPhotoHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPhotoHandle.m; sourceTree = "<group>"; };
+		C4849B30181E0BED0071273D /* CDPhotoDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPhotoDescription.h; sourceTree = "<group>"; };
+		C4849B31181E0BED0071273D /* CDPhotoDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPhotoDescription.m; sourceTree = "<group>"; };
+		C4849B331820863B0071273D /* CDProgressIndicatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDProgressIndicatorCell.h; sourceTree = "<group>"; };
+		C4849B341820863B0071273D /* CDProgressIndicatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDProgressIndicatorCell.m; sourceTree = "<group>"; };
+		C4849B371821619F0071273D /* CDPhotoSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPhotoSearchController.h; sourceTree = "<group>"; };
+		C4849B381821619F0071273D /* CDPhotoSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPhotoSearchController.m; sourceTree = "<group>"; };
+		C4B668A618235060008C17FB /* CDZoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZoomView.h; sourceTree = "<group>"; };
+		C4B668A718235060008C17FB /* CDZoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZoomView.m; sourceTree = "<group>"; };
+		C4B668B618247E5F008C17FB /* CDFavouritePhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDFavouritePhotos.h; sourceTree = "<group>"; };
+		C4B668B718247E5F008C17FB /* CDFavouritePhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDFavouritePhotos.m; sourceTree = "<group>"; };
+		C4B668BB18249505008C17FB /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		C4DDDF76181B19300092EF08 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		E54F88830007466EB34208E1 /* libPods-CodeDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +119,7 @@
 				C4520C151819E02000BE0A13 /* CoreData.framework in Frameworks */,
 				C4520C131819E02000BE0A13 /* UIKit.framework in Frameworks */,
 				C4520C0F1819E02000BE0A13 /* Foundation.framework in Frameworks */,
+				5230C166762B420E9ED3D4CE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +131,7 @@
 				C4520C301819E02000BE0A13 /* CoreData.framework in Frameworks */,
 				C4520C2F1819E02000BE0A13 /* UIKit.framework in Frameworks */,
 				C4520C2E1819E02000BE0A13 /* Foundation.framework in Frameworks */,
+				B4018D0223924EA68FE0B58F /* libPods-CodeDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +145,8 @@
 				C4520C331819E02000BE0A13 /* CodeDemoTests */,
 				C4520C0D1819E02000BE0A13 /* Frameworks */,
 				C4520C0C1819E02000BE0A13 /* Products */,
+				9DA6BCCC3422424A85955EE2 /* Pods.xcconfig */,
+				0CCD4728DF544BE197CC52D9 /* Pods-CodeDemoTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +167,8 @@
 				C4520C121819E02000BE0A13 /* UIKit.framework */,
 				C4520C141819E02000BE0A13 /* CoreData.framework */,
 				C4520C2C1819E02000BE0A13 /* XCTest.framework */,
+				14A8E866DB9D4803854EB8EC /* libPods.a */,
+				E54F88830007466EB34208E1 /* libPods-CodeDemoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,11 +176,17 @@
 		C4520C161819E02000BE0A13 /* CodeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C4849B361820863E0071273D /* Views */,
+				C49DE1561819EFDE00E55034 /* Networking */,
+				C4520C451819E1F800BE0A13 /* Controllers */,
+				C4520C431819E06F00BE0A13 /* Models */,
 				C4520C1F1819E02000BE0A13 /* CDAppDelegate.h */,
 				C4520C201819E02000BE0A13 /* CDAppDelegate.m */,
 				C4520C251819E02000BE0A13 /* Images.xcassets */,
 				C4520C221819E02000BE0A13 /* CodeDemo.xcdatamodeld */,
 				C4520C171819E02000BE0A13 /* Supporting Files */,
+				C4DDDF76181B19300092EF08 /* Main_iPhone.storyboard */,
+				C4B668BB18249505008C17FB /* Main_iPad.storyboard */,
 			);
 			path = CodeDemo;
 			sourceTree = "<group>";
@@ -153,6 +220,64 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C4520C431819E06F00BE0A13 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4849B30181E0BED0071273D /* CDPhotoDescription.h */,
+				C4849B31181E0BED0071273D /* CDPhotoDescription.m */,
+				C4849B2D181E0BED0071273D /* CDPhotoHandle.h */,
+				C4849B2E181E0BED0071273D /* CDPhotoHandle.m */,
+				C4B668B618247E5F008C17FB /* CDFavouritePhotos.h */,
+				C4B668B718247E5F008C17FB /* CDFavouritePhotos.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C4520C451819E1F800BE0A13 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C4520C461819E23600BE0A13 /* CDPhotoListViewController.h */,
+				C4520C471819E23600BE0A13 /* CDPhotoListViewController.m */,
+				C4849B371821619F0071273D /* CDPhotoSearchController.h */,
+				C4849B381821619F0071273D /* CDPhotoSearchController.m */,
+				C4145C97182204E0009B699D /* CDFavouritesAlbumViewController.h */,
+				C4145C98182204E0009B699D /* CDFavouritesAlbumViewController.m */,
+				C4145C9D1823300D009B699D /* CDPhotoViewController.h */,
+				C4145C9E1823300D009B699D /* CDPhotoViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C4849B361820863E0071273D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C4849B331820863B0071273D /* CDProgressIndicatorCell.h */,
+				C4849B341820863B0071273D /* CDProgressIndicatorCell.m */,
+				C4145C941821F809009B699D /* CDLoadingIndicatorCell.h */,
+				C4145C951821F809009B699D /* CDLoadingIndicatorCell.m */,
+				C4145C9A182207BB009B699D /* CDImageViewCell.h */,
+				C4145C9B182207BB009B699D /* CDImageViewCell.m */,
+				C4B668A618235060008C17FB /* CDZoomView.h */,
+				C4B668A718235060008C17FB /* CDZoomView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C49DE1561819EFDE00E55034 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C4849B21181DBA510071273D /* CDFlickrObjectContext.h */,
+				C4849B22181DBA510071273D /* CDFlickrObjectContext.m */,
+				C4849B24181DC9D40071273D /* CDFlickrManagedObject.h */,
+				C4849B25181DC9D40071273D /* CDFlickrManagedObject.m */,
+				C4849B27181DFD7C0071273D /* NSManagedObjectContext+Copying.h */,
+				C4849B28181DFD7C0071273D /* NSManagedObjectContext+Copying.m */,
+				C4849B2A181E00D00071273D /* NSManagedObjectContext+Async.h */,
+				C4849B2B181E00D00071273D /* NSManagedObjectContext+Async.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,9 +285,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4520C3D1819E02000BE0A13 /* Build configuration list for PBXNativeTarget "CodeDemo" */;
 			buildPhases = (
+				0B781FA19D1841339027B7AB /* Check Pods Manifest.lock */,
 				C4520C071819E02000BE0A13 /* Sources */,
 				C4520C081819E02000BE0A13 /* Frameworks */,
 				C4520C091819E02000BE0A13 /* Resources */,
+				B37BD55BD9FD4BAE8C8FDD94 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,9 +304,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4520C401819E02000BE0A13 /* Build configuration list for PBXNativeTarget "CodeDemoTests" */;
 			buildPhases = (
+				CA6F170C176344AFA14FC2D5 /* Check Pods Manifest.lock */,
 				C4520C271819E02000BE0A13 /* Sources */,
 				C4520C281819E02000BE0A13 /* Frameworks */,
 				C4520C291819E02000BE0A13 /* Resources */,
+				AAF1A4CC8F2B4B5E9DCDDFEC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +359,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4520C1B1819E02000BE0A13 /* InfoPlist.strings in Resources */,
+				C4B668BC18249505008C17FB /* Main_iPad.storyboard in Resources */,
+				C4DDDF77181B19300092EF08 /* Main_iPhone.storyboard in Resources */,
 				C4520C261819E02000BE0A13 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +375,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B781FA19D1841339027B7AB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AAF1A4CC8F2B4B5E9DCDDFEC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-CodeDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B37BD55BD9FD4BAE8C8FDD94 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA6F170C176344AFA14FC2D5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C4520C071819E02000BE0A13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4849B32181E0BED0071273D /* CDPhotoDescription.m in Sources */,
+				C4145C99182204E0009B699D /* CDFavouritesAlbumViewController.m in Sources */,
 				C4520C1D1819E02000BE0A13 /* main.m in Sources */,
+				C4849B26181DC9D40071273D /* CDFlickrManagedObject.m in Sources */,
+				C4145C961821F809009B699D /* CDLoadingIndicatorCell.m in Sources */,
+				C4B668A818235060008C17FB /* CDZoomView.m in Sources */,
+				C4849B23181DBA510071273D /* CDFlickrObjectContext.m in Sources */,
+				C4849B351820863B0071273D /* CDProgressIndicatorCell.m in Sources */,
+				C4849B2F181E0BED0071273D /* CDPhotoHandle.m in Sources */,
 				C4520C241819E02000BE0A13 /* CodeDemo.xcdatamodeld in Sources */,
+				C4145C9C182207BB009B699D /* CDImageViewCell.m in Sources */,
+				C4849B391821619F0071273D /* CDPhotoSearchController.m in Sources */,
+				C4849B29181DFD7C0071273D /* NSManagedObjectContext+Copying.m in Sources */,
+				C4145C9F1823300D009B699D /* CDPhotoViewController.m in Sources */,
+				C4849B2C181E00D00071273D /* NSManagedObjectContext+Async.m in Sources */,
+				C4520C481819E23600BE0A13 /* CDPhotoListViewController.m in Sources */,
 				C4520C211819E02000BE0A13 /* CDAppDelegate.m in Sources */,
+				C4B668B818247E5F008C17FB /* CDFavouritePhotos.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,12 +578,14 @@
 		};
 		C4520C3E1819E02000BE0A13 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DA6BCCC3422424A85955EE2 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeDemo/CodeDemo-Prefix.pch";
 				INFOPLIST_FILE = "CodeDemo/CodeDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -382,12 +593,14 @@
 		};
 		C4520C3F1819E02000BE0A13 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DA6BCCC3422424A85955EE2 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeDemo/CodeDemo-Prefix.pch";
 				INFOPLIST_FILE = "CodeDemo/CodeDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -395,6 +608,7 @@
 		};
 		C4520C411819E02000BE0A13 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CCD4728DF544BE197CC52D9 /* Pods-CodeDemoTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CodeDemo.app/CodeDemo";
@@ -418,6 +632,7 @@
 		};
 		C4520C421819E02000BE0A13 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CCD4728DF544BE197CC52D9 /* Pods-CodeDemoTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CodeDemo.app/CodeDemo";
@@ -454,6 +669,7 @@
 				C4520C3F1819E02000BE0A13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4520C401819E02000BE0A13 /* Build configuration list for PBXNativeTarget "CodeDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +678,7 @@
 				C4520C421819E02000BE0A13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
