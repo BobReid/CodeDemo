@@ -154,6 +154,7 @@
     CDProgressIndicatorCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     [cell.textLabel setText:photo.title];
+    [[cell.imageView imageResponseSerializer] setImageScale:1.0f];
     [cell.imageView setImageWithURL:[NSURL URLWithString:photo.thumbnailHandle.url] placeholderImage:self.placeholderImage];
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     

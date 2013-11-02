@@ -21,7 +21,6 @@
 
 @interface CDPhotoListViewController () <CDPhotoSearchControllerDelegate, UIDocumentInteractionControllerDelegate, CDPhotoViewControllerDelegate>
 
-//@property (strong, nonatomic) NSMutableArray* favourites;
 @property (strong, nonatomic) CDFavouritePhotos* album;
 @property (strong, nonatomic) CDPhotoSearchController* photoSearchController;
 @property (strong, nonatomic) UIImage* placeholderImage;
@@ -63,7 +62,7 @@
     
     [self.tableView registerClass:[CDProgressIndicatorCell class] forCellReuseIdentifier:@"Progress"];
     
-    UIBarButtonItem* editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editPressed:)];
+    UIBarButtonItem* editButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Edit", @"Edit button") style:UIBarButtonItemStylePlain target:self action:@selector(editPressed:)];
     [editButton setPossibleTitles:[NSSet setWithObjects:NSLocalizedString(@"Edit", @"Edit button"),
                                                         NSLocalizedString(@"Done", @"Done button"), nil]];
     [self.navigationItem setRightBarButtonItem:editButton];
@@ -122,7 +121,15 @@
 {
     NSUInteger fromIndex = [[notification.userInfo objectForKey:CDFavouritePhotoFromIndexKey] unsignedIntegerValue];
     NSIndexPath* path = [NSIndexPath indexPathForRow:fromIndex inSection:0];
+    
+    [self.tableView beginUpdates];
     [self.tableView deleteRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationLeft];
+    
+    if([self.album count] == 0)
+    {
+        [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationTop];
+    }
+    [self.tableView endUpdates];
 }
 
 - (void)photoMoved:(NSNotification*)notification
@@ -135,16 +142,20 @@
 
 #pragma mark - UIActions
 
-- (void)editPressed:(id)sender
+- (void)editPressed:(UIBarButtonItem*)sender
 {
     if([self.tableView isEditing])
     {
+        [sender setTitle:NSLocalizedString(@"Edit", @"Edit button title")];
+        [sender setStyle:UIBarButtonItemStylePlain];
         [UIView animateWithDuration:0.2f animations:^{
             [self.tableView setEditing:NO];
         }];
     }
     else
     {
+        [sender setTitle:NSLocalizedString(@"Done", @"Done button title")];
+        [sender setStyle:UIBarButtonItemStyleDone];
         [UIView animateWithDuration:0.2f animations:^{
             [self.tableView setEditing:YES];
         }];
@@ -231,17 +242,30 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if([self.album count] == 0)
+    {
+        [self.searchDisplayController.searchBar becomeFirstResponder];
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+        return;
+    }
+    
     CDPhotoDescription* photo = [self.album photoAtIndex:indexPath.row];
     [self showPhoto:photo];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if([self.album count] == 0)
+        return NO;
+    
     return YES;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if([self.album count] == 0)
+        return NO;
+    
     return YES;
 }
 
@@ -252,6 +276,9 @@
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if([self.album count] == 0)
+        return UITableViewCellEditingStyleDelete;
+    
     return UITableViewCellEditingStyleDelete;
 }
 

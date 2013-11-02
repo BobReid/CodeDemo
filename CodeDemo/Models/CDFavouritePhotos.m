@@ -111,7 +111,7 @@
     
     CDPhotoDescription* saved = (CDPhotoDescription*)[[self favouritesContext] localInstanceOfObject:photo];
     [saved setOrder:[NSNumber numberWithUnsignedInteger:_photos.count]];
-    [_photos addObject:saved];
+    
     
     NSURL* sourceUrl = [NSURL URLWithString:photo.largestHandle.filePath];
     NSString* fileName = [sourceUrl lastPathComponent];
@@ -119,8 +119,13 @@
     NSURL* destUrl = [[((CDAppDelegate*)[[UIApplication sharedApplication] delegate]) favouritesDirectory] URLByAppendingPathComponent:fileName];
     
     NSError* error;
-    
     [[NSFileManager defaultManager] copyItemAtURL:sourceUrl toURL:destUrl error:&error];
+    
+    if(error)
+    {
+        NSLog(@"Error: %@", [error localizedDescription]);
+        return nil;
+    }
     
     [saved.largestHandle setFilePath:[destUrl absoluteString]];
     
@@ -132,6 +137,7 @@
         return nil;
     }
 
+    [_photos addObject:saved];
     id userInfo = @{ CDFavouritePhotoToIndexKey : saved.order };
     [[NSNotificationCenter defaultCenter] postNotificationName:CDFavouritePhotoAdded object:photo userInfo:userInfo];
     
@@ -153,13 +159,15 @@
         return;
     
     NSUInteger oldIndex = [_photos indexOfObject:photo];
-    [_photos removeObject:photo];
     [[self favouritesContext] deleteObject:photo];
     
-    for(NSUInteger i = oldIndex; i < [_photos count]; i++)
-        [_photos[i] setOrder:[NSNumber numberWithUnsignedInteger:i]];
-    
-    [self saveContext];
+    if([self saveContext])
+    {
+        
+        [_photos removeObjectAtIndex:oldIndex];
+        for(NSUInteger i = oldIndex; i < [_photos count]; i++)
+            [_photos[i] setOrder:[NSNumber numberWithUnsignedInteger:i]];
+    }
     
     id userInfo = @{ CDFavouritePhotoFromIndexKey : [NSNumber numberWithUnsignedInteger:oldIndex] };
     [[NSNotificationCenter defaultCenter] postNotificationName:CDFavouritePhotoRemoved object:photo userInfo:userInfo];
@@ -193,16 +201,16 @@
     }
     
     [photo setOrder:[NSNumber numberWithUnsignedInteger:toIndex]];
-    [_photos removeObjectAtIndex:fromIndex];
-    [_photos insertObject:photo atIndex:toIndex];
     
-    [self saveContext];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:CDFavouritePhotoRepositioned
-                                                        object:photo
-                                                      userInfo:@{ CDFavouritePhotoFromIndexKey  : [NSNumber numberWithUnsignedInteger:fromIndex],
-                                                                  CDFavouritePhotoToIndexKey    : [NSNumber numberWithUnsignedInteger:toIndex]}];
-    
+    if([self saveContext])
+    {
+        [_photos removeObjectAtIndex:fromIndex];
+        [_photos insertObject:photo atIndex:toIndex];
+        [[NSNotificationCenter defaultCenter] postNotificationName:CDFavouritePhotoRepositioned
+                                                            object:photo
+                                                          userInfo:@{ CDFavouritePhotoFromIndexKey  : [NSNumber numberWithUnsignedInteger:fromIndex],
+                                                                      CDFavouritePhotoToIndexKey    : [NSNumber numberWithUnsignedInteger:toIndex]}];
+    }
 }
 
 @end
